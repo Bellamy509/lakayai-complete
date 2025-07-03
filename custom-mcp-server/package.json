@@ -1,0 +1,27 @@
+{
+  "name": "thinking-assistant-mcp",
+  "version": "1.0.0",
+  "description": "Serveur MCP pour la réflexion et l'analyse structurée",
+  "type": "module",
+  "main": "dist/http-server.js",
+  "bin": {
+    "thinking-assistant": "./thinking-server.ts"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/http-server.js",
+    "start:mcp": "node dist/thinking-server.js",
+    "dev": "tsx http-server.ts",
+    "dev:mcp": "tsx thinking-server.ts",
+    "test": "node test-deployment.js",
+    "postinstall": "npm run build"
+  },
+  "keywords": ["mcp", "thinking", "analysis", "brainstorming"],
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0"
+  },
+  "devDependencies": {
+    "tsx": "^4.0.0",
+    "typescript": "^5.0.0"
+  }
+} 
